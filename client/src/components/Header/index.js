@@ -1,6 +1,5 @@
 import React from 'react';
-
-const header = () => {
+const Header = () => {
 return <Jumbotron>
 <h1>Steadfast</h1>
 <p>
@@ -10,7 +9,5 @@ return <Jumbotron>
   <Button variant="primary">Get Started</Button>
 </p>
 </Jumbotron>
-
 };
-
-  export default header;
+  export default Header;
