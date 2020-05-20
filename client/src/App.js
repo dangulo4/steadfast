@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from './components/Navbar';
+import Header from './components/Header';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+  state = { users: [], search: '' };
 
+  render() {
+    return (
+      <>
+        <NavBar></NavBar>
+        <Header>
+          <h1>This is the Header for Steadfast</h1>
+        </Header>
+        <div className="container">
+          <h2>This is a place holder for our Steadfast App</h2>
+        </div>
+      </>
+    );
+  }
+}
 export default App;
