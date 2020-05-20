@@ -1,37 +1,54 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div className="container center">
-      <nav className="menu">
-        <h1 className="menu__logo">Steadfast</h1>
-
-        <div className="menu__right">
-          <ul className="menu__list">
-            <li className="menu__list-item">
-              <a class="menu__link menu__link--active" href="#">
-                Home
-              </a>
-            </li>
-            <li className="menu__list-item">
-              <a class="menu__link" href="#">
-                Page1
-              </a>
-            </li>
-            <li className="menu__list-item">
-              <a class="menu__link" href="#">
-                Page2
-              </a>
-            </li>
-            <li className="menu__list-item">
-              <a class="menu__link" href="#">
-                Page3
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">
+        SteadFast
+      </Link>
+      <div>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === '/' ||
+                window.location.pathname === '/about'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/company"
+              className={
+                window.location.pathname === '/company'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Company
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/search"
+              className={
+                window.location.pathname === '/search'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Search
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 
