@@ -6,6 +6,7 @@ import NavBar from './components/Navbar';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
 import Jumbotron from './components/Jumbotron';
+import Footer from './components/Footer';
 import Col from './components/Col';
 import './App.css';
 import { Input, TextArea, FormBtn } from "./components/Form";
@@ -23,17 +24,10 @@ function handleFormSubmit(event) {
   event.preventDefault();
 };
 
-
-
 // Loads all books and sets them to books
-
-
 
 class App extends React.Component {
   state = { users: [], search: '' };
-
-
-  
 
   render() {
     return (
@@ -56,7 +50,7 @@ class App extends React.Component {
               </NavBar>
             </Col>
           </Router>
-          <Col size="md-4">
+          <Col size="md-12">
             <Header>
               <h1>This is the Header for Steadfast</h1>
             </Header>
@@ -107,6 +101,12 @@ class App extends React.Component {
           </Col>
           </Row>
       </Container>
+        <Col size="md-12">
+            <Footer>
+              <br></br>
+              <p>San Diego, CA | Updated 2020</p>
+            </Footer>
+          </Col>
       </Wrapper>
     );
   }
