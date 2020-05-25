@@ -7,6 +7,7 @@ function Header(props) {
         <label htmlFor="search">
           Find contacts and leads fast. Get back to business
         </label>
+
         <input
           onChange={props.handleInputChange}
           value={props.value}
@@ -14,10 +15,13 @@ function Header(props) {
           type="text"
           className="form-control"
           placeholder="Search Company"
-          id="search"
         />
         <p>
-          <button onClick={props.handleFormSubmit} className="btn btn-primary">
+          <button
+            onClick={props.handleFormSubmit}
+            className="btn btn-primary"
+            id="srchBtn"
+          >
             Get Started
           </button>
         </p>

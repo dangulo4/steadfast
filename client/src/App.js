@@ -5,6 +5,7 @@ import Clients from './pages/Clients';
 import NoMatch from './pages/NoMatch';
 import NavBar from './components/Navbar';
 import Header from './components/Header';
+import Seach from './utils/API';
 import Wrapper from './components/Wrapper';
 import Jumbotron from './components/Jumbotron';
 import Col from './components/Col';
@@ -35,6 +36,7 @@ class App extends React.Component {
             </Col>
           </Router>
           <Col size="md-4">
+            <Seach></Seach>
             <Header>
               <h1>This is the Header for Steadfast</h1>
             </Header>
