@@ -54,12 +54,11 @@ class App extends React.Component {
           </Col>
           <Jumbotron>
             <Col size="md-12">
-              <div className="container">
-                <h2>This is a place holder for our Steadfast App</h2>
-              </div>
+              <div className="container fluid"></div>
             </Col>
           </Jumbotron>
         </div>
+        <hr></hr>
         <Container fluid>
           <Row>
             <Col size="md-6">

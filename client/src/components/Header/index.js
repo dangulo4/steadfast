@@ -6,18 +6,14 @@ class Header extends Component {
       <form>
         <div
           style={{
-            height: 200,
+            height: 100,
             clear: 'both',
-            paddingTop: 50,
+            paddingTop: 30,
             textAlign: 'left',
           }}
           className="form-group"
         >
-          <label htmlFor="search">
-            <h3>Find contacts and leads fast. Get back to business</h3>
-          </label>
-
-          <br></br>
+          <h3>Find contacts and leads fast. Get back to business</h3>
         </div>
       </form>
     );
