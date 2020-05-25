@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 import Clients from './pages/Clients';
@@ -8,8 +7,25 @@ import Header from './components/Header';
 import Seach from './utils/API';
 import Wrapper from './components/Wrapper';
 import Jumbotron from './components/Jumbotron';
+import Footer from './components/Footer';
 import Col from './components/Col';
 import './App.css';
+import { Input, TextArea, FormBtn } from "./components/Form";
+import { Row, Container } from "./components/Grid";
+import React, { useState, } from "react";
+
+
+function handleInputChange(event) {
+ 
+};
+
+// When the form is submitted, use the API.saveBook method to save the book data
+// Then reload books from the database
+function handleFormSubmit(event) {
+  event.preventDefault();
+};
+
+// Loads all books and sets them to books
 
 class App extends React.Component {
   state = { users: [], search: '' };
@@ -35,8 +51,7 @@ class App extends React.Component {
               </NavBar>
             </Col>
           </Router>
-          <Col size="md-4">
-            <Seach></Seach>
+          <Col size="md-12">
             <Header>
               <h1>This is the Header for Steadfast</h1>
             </Header>
@@ -48,7 +63,51 @@ class App extends React.Component {
               </div>
             </Col>
           </Jumbotron>
-        </div>
+        </div>   
+        <Container fluid>
+        <Row> 
+          <Col size="md-6">           
+            <form>
+              <Input
+                onChange={handleInputChange}
+                name="fname"
+                placeholder="First Name"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="lname"
+                placeholder="Last Name"
+              />
+               <Input
+                onChange={handleInputChange}
+                name="company"
+                placeholder="Company Name"
+              />
+              <TextArea
+                onChange={handleInputChange}
+                name="Notes"
+                placeholder="Notes"
+              />
+              <FormBtn
+                onClick={handleFormSubmit}
+              >
+                Submit Notes
+              </FormBtn>
+            </form>
+          </Col>
+          <Col size="md-6 sm-12">
+            <Jumbotron>
+              <h1>Company Info</h1>
+            </Jumbotron>
+          </Col>
+          </Row>
+      </Container>
+        <Col size="md-12">
+            <Footer>
+              <br></br>
+              <p>San Diego, CA | Updated 2020</p>
+            </Footer>
+          </Col>
       </Wrapper>
     );
   }

@@ -3,9 +3,11 @@ import React from 'react';
 function Header(props) {
   return (
     <form>
-      <div className="form-group">
+      <div 
+            style={{ height: 200, clear: "both", paddingTop: 50, textAlign: "left" }}
+      className="form-group">
         <label htmlFor="search">
-          Find contacts and leads fast. Get back to business
+          <h3>Find contacts and leads fast. Get back to business</h3>
         </label>
 
         <input
@@ -14,15 +16,13 @@ function Header(props) {
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search Company"
+          placeholder="Search Contact Name"
+          id="search"
         />
+        <br></br>
         <p>
-          <button
-            onClick={props.handleFormSubmit}
-            className="btn btn-primary"
-            id="srchBtn"
-          >
-            Get Started
+          <button onClick={props.handleFormSubmit} className="btn btn-primary">
+            Find Contact
           </button>
         </p>
       </div>
