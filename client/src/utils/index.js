@@ -6,7 +6,7 @@ import Col from '../components/Col';
 import API from './API';
 import './App.css';
 
-class Contacts extends React.Component {
+class Leads extends React.Component {
   state = { contacts: [], search: '' };
 
   componentDidMount() {
@@ -105,4 +105,4 @@ class Contacts extends React.Component {
   }
 }
 
-export default Contacts;
+export default Leads;

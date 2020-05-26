@@ -24,14 +24,14 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/company"
+              to="/contacts"
               className={
-                window.location.pathname === '/company'
+                window.location.pathname === '/contacts'
                   ? 'nav-link active'
                   : 'nav-link'
               }
             >
-              Company
+              Contact
             </Link>
           </li>
           <li className="nav-item">
