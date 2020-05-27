@@ -1,12 +1,12 @@
 import axios from 'axios';
-// console.log(process.env.REACT_APP_API_KEY);
 
-const APIKey = 'a93bc93acd1ba3cc69a1814f7ee909396256fca3';
 const API_URL = 'https://api.hunter.io/v2/domain-search?domain=';
 
 export default {
   search: function (query) {
-    return axios.get(API_URL + query + '&api_key=' + APIKey);
+    return axios.get(
+      API_URL + query + '&api_key=' + process.env.REACT_APP_API_KEY
+    );
   },
   // Get all contacts
   getContacts: function () {
@@ -18,7 +18,7 @@ export default {
   },
   // Deletes the contact with the given id
   deleteContact: function (id) {
-    return axios.delete('/api/contact/' + id);
+    return axios.delete('/api/contacts/' + id);
   },
   // Saves a book to the database
   saveContact: function (contactData) {

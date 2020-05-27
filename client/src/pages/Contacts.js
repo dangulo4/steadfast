@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import DeleteBtn from '../components/DeleteBtn';
-import Jumbotron from '../components/Jumbotron';
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
 import { Col, Row, Container } from '../components/Grid';
@@ -43,14 +42,14 @@ function Contacts() {
     if (
       formObject.firstName &&
       formObject.lastName &&
-      formObject.email &&
-      formObject.company
+      formObject.company &&
+      formObject.email
     ) {
       API.saveContact({
         firstName: formObject.firstName,
         lastName: formObject.lastName,
-        email: formObject.email,
         company: formObject.company,
+        email: formObject.email,
         notes: formObject.notes,
       })
         .then((res) => loadContacts())
@@ -104,16 +103,16 @@ function Contacts() {
           </form>
         </Col>
         <Col size="md-6 sm-12">
-          <Jumbotron>
-            <h1>Company Info</h1>
-          </Jumbotron>
+          <div>
+            <h1>CMS Contact Notes:</h1>
+          </div>
           {contacts.length ? (
             <List>
               {contacts.map((contact) => (
                 <ListItem key={contact._id}>
                   <Link to={'/contacts/' + contact._id}>
                     <strong>
-                      {contact.company} by {contacts.email}
+                      {contact.email} at {contact.company}
                     </strong>
                   </Link>
                   <DeleteBtn onClick={() => deleteContact(contact._id)} />

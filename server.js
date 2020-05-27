@@ -15,14 +15,7 @@ if (process.env.NODE_ENV === 'production') {
 // Add routes, both API and view
 app.use(routes);
 
-// DB Config
-const db = require('./config/keys'.MONGODB_URI);
-
-// Connect to the Mongo DB
-mongoose
-  .connect(db)
-  .then(() => console.log('MongoDB Connected...'))
-  .catch((err) => console.log(err));
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/steadfast');
 
 // Start the API server
 app.listen(PORT, function () {

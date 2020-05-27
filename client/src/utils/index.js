@@ -29,7 +29,6 @@ class Leads extends React.Component {
             position: e.position,
             phone: e.phone_number,
             department: e.department,
-            position: e.position,
             company: res.data.data.organization,
             state: res.data.data.state,
             key: i,
