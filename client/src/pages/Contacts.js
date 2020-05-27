@@ -43,6 +43,7 @@ function Contacts() {
       formObject.firstName &&
       formObject.lastName &&
       formObject.company &&
+      formObject.position &&
       formObject.email
     ) {
       API.saveContact({
@@ -50,6 +51,7 @@ function Contacts() {
         lastName: formObject.lastName,
         company: formObject.company,
         email: formObject.email,
+        position: formObject.position,
         notes: formObject.notes,
       })
         .then((res) => loadContacts())
@@ -79,6 +81,11 @@ function Contacts() {
             />
             <Input
               onChange={handleInputChange}
+              name="position"
+              placeholder="Position"
+            />
+            <Input
+              onChange={handleInputChange}
               name="email"
               placeholder="Email"
             />
@@ -93,6 +100,7 @@ function Contacts() {
                   formObject.firstName &&
                   formObject.lastName &&
                   formObject.email &&
+                  formObject.position &&
                   formObject.company
                 )
               }
@@ -112,7 +120,7 @@ function Contacts() {
                 <ListItem key={contact._id}>
                   <Link to={'/contacts/' + contact._id}>
                     <strong>
-                      {contact.email} at {contact.company}
+                      {contact.email} at {contact.company}, {contact.position}
                     </strong>
                   </Link>
                   <DeleteBtn onClick={() => deleteContact(contact._id)} />

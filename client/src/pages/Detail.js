@@ -22,13 +22,13 @@ function Detail(props) {
         <Col size="md-12">
           <Jumbotron>
             <h1>
-              {contact.company} by {contact.email}
+              {contact.company} by {contact.email}, {contact.position}
             </h1>
           </Jumbotron>
         </Col>
       </Row>
       <Row>
-        <Col size="md-10 md-offset-1">
+        <Col size="md-12 md-offset-1">
           <article>
             <h1>Notes</h1>
             <p>{contact.notes}</p>

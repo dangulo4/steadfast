@@ -4,7 +4,7 @@ function Jumbotron({ children }) {
   return (
     <div
       style={{
-        height: 500,
+        height: 100,
         clear: 'both',
         paddingTop: 25,
         textAlign: 'center',
