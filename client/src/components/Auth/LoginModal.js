@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { login } from "../../actions/authActions";
 import { clearErrors } from "../../actions/errorActions";
 
@@ -26,15 +26,16 @@ class LoginModal extends Component {
         msg: null
     };
 
-    static PropTypes = {
-        isAuthenticated: PropTypes.bool,
-        error:  PropTypes.object.isRequired,
-        login: PropTypes.func.isRequired,
-        clear: PropTypes.func.isRequired
+    //Static PropTypes
+    static propTypes = {
+        isAuthenticated: propTypes.bool,
+        error: propTypes.object.isRequired,
+        login: propTypes.func.isRequired,
+        clear: propTypes.func.isRequired
     };
 
     componentDidUpdate(prevProps) {
-        const { error } = this.props;
+        const { error, isAuthenticated } = this.props;
         if(error !== prevProps.error) {
             // Check for a register error
             if(error.id === "LOGIN_FAIL") {

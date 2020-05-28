@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, } from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 import Contacts from './pages/Contacts';
@@ -13,7 +13,6 @@ import Leads from './utils';
 import './App.css';
 import { Input, TextArea, FormBtn } from "./components/Form";
 import { Row, Container } from "./components/Grid";
-import React, { useState, } from "react";
 
 import store from "./store";
 import { loadUser } from "./actions/authActions";

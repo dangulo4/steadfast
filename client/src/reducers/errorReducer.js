@@ -6,7 +6,7 @@ const initialState = {
     id: null
 }
 
-export default function(initialState, action) {
+export default function(state = initialState, action) {
     switch(action.type) {
         case GET_ERRORS:
             return {
@@ -19,7 +19,7 @@ export default function(initialState, action) {
                     msg: {},
                     status: null,
                     id: null
-                }
+                };
                 default:
                     return state;
     }

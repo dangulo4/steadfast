@@ -2,10 +2,10 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 // import { NavLink } from "reactstrap";
 import { connect } from "react-redux";
-import PropTypes from "PropTypes";
-import RegisterModal from "./auth/RegisterModal";
-import LoginModal from "./auth/LoginModal";
-import Logout from "./auth/Logout";
+import propTypes from "prop-types";
+import RegisterModal from "../auth/RegisterModal";
+import LoginModal from "../auth/LoginModal";
+import Logout from "../auth/Logout";
 import { NavItem } from "reactstrap";
 
 class Navbar extends Component {
@@ -13,8 +13,9 @@ class Navbar extends Component {
   //   isOpen: false
   // };
 
-  static PropTypes = {
-    auth: PropTypes.object.isRequired
+  //Static PropTypes
+  static propTypes = {
+    auth: propTypes.object.isRequired
   };
 
   // toggle = () =>  {

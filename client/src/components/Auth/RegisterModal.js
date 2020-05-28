@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
 import {
     Button,
     Modal,
@@ -13,7 +14,7 @@ import {
 } from "reactstrap";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+
 import { register } from "../../actions/authActions";
 import { clearErrors } from "../../actions/errorActions";
 
@@ -27,15 +28,16 @@ class RegisterModal extends Component {
         msg: null
     };
 
-    static PropTypes = {
-        isAuthenticated: PropTypes.bool,
-        error:  PropTypes.object.isRequired,
-        register: PropTypes.func.isRequired,
-        clear: PropTypes.func.isRequired
+    //Static PropTypes
+    static propTypes = {
+        isAuthenticated: propTypes.bool,
+        error:  propTypes.object.isRequired,
+        register: propTypes.func.isRequired,
+        clear: propTypes.func.isRequired
     };
 
     componentDidUpdate(prevProps) {
-        const { error } = this.props;
+        const { error, isAuthenticated } = this.props;
         if(error !== prevProps.error) {
             // Check for a register error
             if(error.id === "REGISTER_FAIL") {
@@ -49,9 +51,8 @@ class RegisterModal extends Component {
             if (isAuthenticated) {
                 this.toggle();
             }
-
         }
-    }
+    };
 
     toggle = () => {
         // Clear errors from modal
