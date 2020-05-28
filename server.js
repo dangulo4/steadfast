@@ -1,7 +1,7 @@
 const express = require('express');
 
 const mongoose = require('mongoose');
-// const routes = require('./routes');
+const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -20,8 +20,10 @@ app.use("api/auth", require("./routes/api/auth"));
 // DB configuration
 const db = confog.get("mongoURI");
 
+app.use(routes);
+
 // Connect to the Mongo DB
-mongoose.connect(db, 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/steadfast', 
   {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -29,16 +31,6 @@ mongoose.connect(db,
   })
   .then(() => console.log("Connected to MongoDB Successfully!"))
   .catch(err => console.log(err));
-
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/steadfast', 
-//   {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true
-//   })
-//   .then(() => console.log("Connected to MongoDB Successfully!"))
-//   .catch(err => console.log(err));
-
 
 // Start the API server
 app.listen(PORT, function () {

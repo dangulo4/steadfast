@@ -52,48 +52,48 @@ class Navbar extends Component {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/">
-          SteadFast
-        </Link>
-        <div>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                to="/"
-                className={
-                  window.location.pathname === '/' ||
-                  window.location.pathname === '/about'
-                    ? 'nav-link active'
-                    : 'nav-link'
-                }
-              >
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/company"
-                className={
-                  window.location.pathname === '/company'
-                    ? 'nav-link active'
-                    : 'nav-link'
-                }
-              >
-                Company
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/search"
-                className={
-                  window.location.pathname === '/search'
-                    ? 'nav-link active'
-                    : 'nav-link'
-                }
-              >
-                Search
-              </Link>
-            </li>
+      <Link className="navbar-brand" to="/">
+        SteadFast
+      </Link>
+      <div>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === '/' ||
+                window.location.pathname === '/about'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/contacts"
+              className={
+                window.location.pathname === '/contacts'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Contact
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/search"
+              className={
+                window.location.pathname === '/search'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Search
+            </Link>
+          </li>
             <li>
               { isAuthenticated ? authLinks : guestLinks }
             </li>
@@ -103,6 +103,57 @@ class Navbar extends Component {
     );
   }
 }
+
+
+// function Navbar() {
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+//       <Link className="navbar-brand" to="/">
+//         SteadFast
+//       </Link>
+//       <div>
+//         <ul className="navbar-nav">
+//           <li className="nav-item">
+//             <Link
+//               to="/"
+//               className={
+//                 window.location.pathname === '/' ||
+//                 window.location.pathname === '/about'
+//                   ? 'nav-link active'
+//                   : 'nav-link'
+//               }
+//             >
+//               About
+//             </Link>
+//           </li>
+//           <li className="nav-item">
+//             <Link
+//               to="/contacts"
+//               className={
+//                 window.location.pathname === '/contacts'
+//                   ? 'nav-link active'
+//                   : 'nav-link'
+//               }
+//             >
+//               Contact
+//             </Link>
+//           </li>
+//           <li className="nav-item">
+//             <Link
+//               to="/search"
+//               className={
+//                 window.location.pathname === '/search'
+//                   ? 'nav-link active'
+//                   : 'nav-link'
+//               }
+//             >
+//               Search
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
 
 const mapStateToProps = state => ({
   auth: state.auth
