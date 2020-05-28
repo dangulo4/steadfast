@@ -43,6 +43,7 @@ class LoginModal extends Component {
                 this.setState({ msg: null });
             }
         } 
+        
         // If authentication is successfull, close modal
         if (this.state.modal) {
             if (isAuthenticated) {
