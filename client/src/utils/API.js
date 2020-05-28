@@ -20,7 +20,7 @@ export default {
   deleteContact: function (id) {
     return axios.delete('/api/contacts/' + id);
   },
-  // Saves a book to the database
+  // Saves a contact to the database
   saveContact: function (contactData) {
     return axios.post('/api/contacts', contactData);
   },
