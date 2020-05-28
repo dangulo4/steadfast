@@ -13,10 +13,32 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 // Add routes, both API and view
-// app.use(routes);
+app.use("api/users", require("./routes/api/users"));
+app.use("api/auth", require("./routes/api/auth"));
+
+
+// DB configuration
+const db = confog.get("mongoURI");
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/steadfast');
+mongoose.connect(db, 
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+  })
+  .then(() => console.log("Connected to MongoDB Successfully!"))
+  .catch(err => console.log(err));
+
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/steadfast', 
+//   {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true
+//   })
+//   .then(() => console.log("Connected to MongoDB Successfully!"))
+//   .catch(err => console.log(err));
+
 
 // Start the API server
 app.listen(PORT, function () {

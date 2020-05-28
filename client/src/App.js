@@ -13,6 +13,9 @@ import { Input, TextArea, FormBtn } from "./components/Form";
 import { Row, Container } from "./components/Grid";
 import React, { useState, } from "react";
 
+import store from "./store";
+import { loadUser } from "./actions/authActions";
+
 
 function handleInputChange(event) {
  
@@ -28,6 +31,10 @@ function handleFormSubmit(event) {
 
 class App extends React.Component {
   state = { users: [], search: '' };
+
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
 
   render() {
     return (

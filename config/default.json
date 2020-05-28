@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://StarMoose42:MooseLinker24@cluster0-3pwbk.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "user_jwtSecret" 
+}
