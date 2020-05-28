@@ -6,7 +6,7 @@ import propTypes from "prop-types";
 import RegisterModal from "../auth/RegisterModal";
 import LoginModal from "../auth/LoginModal";
 import Logout from "../auth/Logout";
-import { NavItem } from "reactstrap";
+// import { NavItem } from "reactstrap";
 
 class Navbar extends Component {
   // state = {
