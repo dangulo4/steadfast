@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 // import { NavLink } from "reactstrap";
 import { connect } from "react-redux";
 import propTypes from "prop-types";
-import RegisterModal from "../auth/RegisterModal";
-import LoginModal from "../auth/LoginModal";
-import Logout from "../auth/Logout";
+import RegisterModal from "../Auth/RegisterModal.js";
+import LoginModal from "../Auth/LoginModal.js";
+import Logout from "../Auth/Logout.js";
 // import { NavItem } from "reactstrap";
 
 class Navbar extends Component {
