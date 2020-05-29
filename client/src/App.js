@@ -11,12 +11,11 @@ import Footer from './components/Footer';
 import Col from './components/Col';
 import Leads from './utils';
 import './App.css';
-import { Input, TextArea, FormBtn } from "./components/Form";
-import { Row, Container } from "./components/Grid";
 
 import store from "./store";
 import { loadUser } from "./actions/authActions";
 import Detail from './pages/Detail';
+import { Provider } from "react-redux";
 
 // function handleInputChange(event) {
  
@@ -24,14 +23,14 @@ import Detail from './pages/Detail';
 
 // When the form is submitted, use the API.saveBook method to save the book data
 // Then reload books from the database
-function handleFormSubmit(event) {
-  event.preventDefault();
-};
+// function handleFormSubmit(event) {
+//   event.preventDefault();
+// };
 
 // Loads all books and sets them to books
 
 class App extends React.Component {
-  state = { users: [], search: '' };
+  // state = { users: [], search: '' };
 
   componentDidMount() {
     store.dispatch(loadUser());
@@ -39,43 +38,45 @@ class App extends React.Component {
 
   render() {
     return (
-      <Wrapper>
-        <div className="container">
-          <Router>
+      <Provider>
+        <Wrapper>
+          <div className="container">
+            <Router>
+              <Col size="md-12">
+                <NavBar />
+                <Switch>
+                  <Route exact path="/" component={About} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/contacts" component={Contacts} />
+                  <Route exact path="/contacts/:id" component={Detail} />
+                  <Route exact path="/search" component={Leads} />
+                  <Route>
+                    <NoMatch />
+                  </Route>
+                </Switch>
+              </Col>
+            </Router>
             <Col size="md-12">
-              <NavBar />
-              <Switch>
-                <Route exact path="/" component={About} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/contacts" component={Contacts} />
-                <Route exact path="/contacts/:id" component={Detail} />
-                <Route exact path="/search" component={Leads} />
-                <Route>
-                  <NoMatch />
-                </Route>
-              </Switch>
+              <Header>
+                <h1>This is the Header for Steadfast</h1>
+              </Header>
             </Col>
-          </Router>
-          <Col size="md-12">
-            <Header>
-              <h1>This is the Header for Steadfast</h1>
-            </Header>
-          </Col>
-          <Jumbotron>
-            <Col size="md-12">
-              <div className="container fluid"></div>
-            </Col>
-          </Jumbotron>
-        </div>
-        <hr></hr>
+            <Jumbotron>
+              <Col size="md-12">
+                <div className="container fluid"></div>
+              </Col>
+            </Jumbotron>
+          </div>
+          <hr></hr>
 
-        <Col size="md-12">
-          <Footer>
-            <br></br>
-            <p>San Diego, CA | Updated 2020</p>
-          </Footer>
-        </Col>
-      </Wrapper>
+          <Col size="md-12">
+            <Footer>
+              <br></br>
+              <p>San Diego, CA | Updated 2020</p>
+            </Footer>
+          </Col>
+        </Wrapper>
+      </Provider>
     );
   }
 }
