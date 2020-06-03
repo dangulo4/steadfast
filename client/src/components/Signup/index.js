@@ -2,42 +2,45 @@
 import React, { Component } from'react';
 import Modal from 'react-responsive-modal';
 
-// Login Component
-class Login extends Component {
+// Signup Component
+class Signup extends Component {
 
     // Passing props
     constructor(props) {
         super(props)
 
         this.state = {
-            login: false
+            signup: false
         }
     }
 
     // Modal state control
-    onLoginModalOpen = () => {
-        this.setState({ login: true });
+    onSignupModalOpen = () => {
+        this.setState({ signup: true });
     };
 
-    onLoginModalClose = () => {
-        this.setState({ login: false });
+    onSignupModalClose = () => {
+        this.setState({ signup: false });
     };
 
     // Modal JSX
     render() {
-        const { login } = this.state;
+        const { signup } = this.state;
         return (
-            <Modal open = { login } onClose = { this.onLoginModalClose }>
+            <Modal open = { signup } onClose = { this.onSignupModalClose }>
                 <div className = 'modal-body'>
-                    <h2>Login</h2>
-                    <form className = 'contact-form form-validate4' novalidate = 'novalidate'>
+                    <h2>Sign Up</h2>
+                    <form className = 'contact-form form-validate3' novalidate = 'novalidate'>
+                        <div className = 'form-group'>
+                            <input className = 'form-control' type = 'text' name = 'name' id = 'name' placeholder = 'First Name'  required = ''  autoComplete = 'off'></input>
+                        </div>
                         <div className = 'form-group'>
                             <input className = 'form-control' type = 'email' name = 'email' placeholder = 'E-Mail' required = ''  autoComplete = 'off'></input>
                         </div>
                         <div className = 'form-group'>
                             <input className = 'form-control' type = 'password' name = 'pass' placeholder = 'Password' required = '' autoComplete = 'off'></input>
                         </div>
-                        <input className = 'btn btn-md btn-primary btn-center' id = 'login_btn' type = 'button' value = 'Login'></input>
+                        <input className = 'btn btn-md btn-primary btn-center' id = 'sign_up' type = 'button' value = 'Sign Up'></input>
                     </form>
                 </div>
             </Modal>
@@ -49,5 +52,4 @@ class Login extends Component {
 
 }
 
-export default Login;
-
+export default Signup;

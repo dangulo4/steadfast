@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Login from '../Login';
+import Signup from '../Signup';
+
 
 function Navbar() {
+  const { login, signup } = this.state;
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
@@ -45,6 +49,22 @@ function Navbar() {
             >
               Search
             </Link>
+          </li>
+          <li className='nav-item'>
+            <button
+              className = 'btn btn-secondary'
+              id = 'login'
+              onClick = {this.onLoginModalOpen}>
+                Login
+            </button>
+          </li>
+          <li className='nav-item'>
+            <button
+              className = 'btn btn-secondary'
+              id = 'signup'
+              onClick = {this.onSignupModalOpen}>
+                Signup
+            </button>
           </li>
         </ul>
       </div>
