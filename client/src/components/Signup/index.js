@@ -29,7 +29,7 @@ class Signup extends Component {
         return (
             <Modal open = { signup } onClose = { this.onSignupModalClose }>
                 <div className = 'modal-body'>
-                    <h2>Sign Up</h2>
+                    <h2>Signup to Get Started!</h2>
                     <form className = 'contact-form form-validate3' novalidate = 'novalidate'>
                         <div className = 'form-group'>
                             <input className = 'form-control' type = 'text' name = 'name' id = 'name' placeholder = 'First Name'  required = ''  autoComplete = 'off'></input>
