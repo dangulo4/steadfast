@@ -62,6 +62,7 @@ class Navbar extends Component {
             </li>
             <li className='nav-item'>
               <button
+                // style = {{paddingLeft: "20px"}}
                 className = 'btn btn-secondary'
                 id = 'login'
                 onClick = {this.onLoginModalOpen}>
@@ -70,6 +71,7 @@ class Navbar extends Component {
             </li>
             <li className='nav-item'>
               <button
+                // style = {{paddingLeft: "20px"}}
                 className = 'btn btn-secondary'
                 id = 'signup'
                 onClick = {this.onSignupModalOpen}>
