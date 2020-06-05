@@ -78,7 +78,6 @@ const About = () => {
               </MDBContainer>
             </MDBCol>
           </MDBRow>
-          <hr className="mb-5 mt-4" />
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>

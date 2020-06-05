@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../../pages/style.css";
 function ContactCard(props) {
   return (
     <thead>

@@ -60,7 +60,7 @@ function Contacts() {
   }
 
   return (
-    <Container fluid>
+    <Container fluid >
       <Row>
         <Col size="md-6">
           <form>
