@@ -15,13 +15,13 @@ class Signup extends Component {
     }
 
     // Modal state control
-    onSignupModalOpen = () => {
-        this.setState({ signup: true });
-    };
+    // onSignupModalOpen = () => {
+    //     this.setState({ signup: true });
+    // };
 
-    onSignupModalClose = () => {
-        this.setState({ signup: false });
-    };
+    // onSignupModalClose = () => {
+    //     this.setState({ signup: false });
+    // };
 
     // Modal JSX
     render() {

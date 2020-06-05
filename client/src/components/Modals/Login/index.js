@@ -15,13 +15,13 @@ class Login extends Component {
     }
 
     // Modal state control
-    onLoginModalOpen = () => {
-        this.setState({ login: true });
-    };
+    // onLoginModalOpen = () => {
+    //     this.setState({ login: true });
+    // };
 
-    onLoginModalClose = () => {
-        this.setState({ login: false });
-    };
+    // onLoginModalClose = () => {
+    //     this.setState({ login: false });
+    // };
 
     // Modal JSX
     render() {

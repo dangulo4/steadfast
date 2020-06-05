@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from 'react-responsive-modal';
+// import Modal from 'react-responsive-modal';
 import Login from '../Modals/Login';
 import Signup from '../Modals/Signup';
 
@@ -10,17 +10,37 @@ class Navbar extends Component {
     super(props)
 
     this.state = {
+      // onLoginModalOpen: false,
+      // onLoginModalClose: false,
+      // onSignupModalOpen: false,
+      // onSignupModalClose: false,
       login: false,
       signup: false
     }
-}
+  }
+
+  // Modal state control
+  onLoginModalOpen = () => {
+    this.setState({ login: true });
+  };
+
+  onLoginModalClose = () => {
+    this.setState({ login: false });
+  };
+  
+  onSignupModalOpen = () => {
+    this.setState({ signup: true });
+  };
+  onSignupModalClose = () => {
+    this.setState({ signup: false });
+  };
+  
+
   render() {
     const { login, signup } = this.state;
 
     return (
       <div>
-        <Login login={this.state.login} ></Login>
-        <Signup signup={this.state.signup} ></Signup>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
             SteadFast
@@ -65,6 +85,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className='nav-item'>
+                <Login login={this.state.login} ></Login>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
@@ -74,6 +95,7 @@ class Navbar extends Component {
                 </button>
               </li>
               <li className='nav-item'>
+                <Signup signup={this.state.signup} ></Signup>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
