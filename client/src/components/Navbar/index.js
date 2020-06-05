@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        SteadFast
+      <img
+                    src="https://files.slack.com/files-pri/TQT6VKHUN-F014X2B9MQC/84f5789f-9f60-4305-8e7e-abb13be496da_200x200.png"
+                    alt="logo"
+                    className="img-logo"             
+                  />
       </Link>
       <div>
         <ul className="navbar-nav">

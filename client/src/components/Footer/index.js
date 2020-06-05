@@ -1,11 +1,9 @@
 import React from 'react';
+import "./style.css";
 
 function Footer({ children }) {
     return (
-      <div
-        style={{  height: 150, clear: "both", paddingTop: 100, textAlign: "center" }}
-        className="Footer"
-      >
+      <div className="Footer col-md-12">
         {children}
       </div>
     );

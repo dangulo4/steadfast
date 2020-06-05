@@ -34,24 +34,12 @@ class App extends React.Component {
             </Col>
           </Router>
           <Col size="md-12">
-            <Header>
-              <h1>This is the Header for Steadfast</h1>
-            </Header>
-          </Col>
-          <Jumbotron>
-            <Col size="md-12">
-              <div className="container fluid"></div>
-            </Col>
-          </Jumbotron>
-        </div>
-        <hr></hr>
-
-        <Col size="md-12">
           <Footer>
             <br></br>
-            <p>San Diego, CA | Updated 2020</p>
+            <p>Amusing-Crocodile| Updated 2020</p>
           </Footer>
         </Col>
+        </div>
       </Wrapper>
     );
   }
