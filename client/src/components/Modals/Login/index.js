@@ -27,7 +27,7 @@ class Login extends Component {
     render() {
         const { login } = this.state;
         return (
-            <Modal open = { login } onClose = { this.onLoginModalClose }>
+            <Modal open = { this.props.login } onClose = { this.props.closeLogin }>
                 <div className = 'modal-body'>
                     <h2>Login</h2>
                     <form className = 'contact-form form-validate4' novalidate = 'novalidate'>
@@ -37,7 +37,13 @@ class Login extends Component {
                         <div className = 'form-group'>
                             <input className = 'form-control' type = 'password' name = 'pass' placeholder = 'Password' required = '' autoComplete = 'off'></input>
                         </div>
-                        <input className = 'btn btn-md btn-primary btn-center' id = 'login_btn' type = 'button' value = 'Login'></input>
+                        {/* <input className = 'btn btn-md btn-primary btn-center' id = 'login_btn' type = 'button' value = 'Login'></input> */}
+                        <button
+                            className = 'btn btn-primary'
+                            id = 'login'
+                            onClick = {this.onLoginModalClose}>
+                                Login
+                        </button>
                     </form>
                 </div>
             </Modal>

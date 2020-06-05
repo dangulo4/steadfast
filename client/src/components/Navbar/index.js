@@ -27,7 +27,7 @@ class Navbar extends Component {
   onLoginModalClose = () => {
     this.setState({ login: false });
   };
-  
+
   onSignupModalOpen = () => {
     this.setState({ signup: true });
   };
@@ -85,7 +85,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Login login={this.state.login} ></Login>
+                <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
@@ -95,7 +95,7 @@ class Navbar extends Component {
                 </button>
               </li>
               <li className='nav-item'>
-                <Signup signup={this.state.signup} ></Signup>
+                <Signup signup={this.state.signup} closeModal={this.state.closeSignup}></Signup>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
