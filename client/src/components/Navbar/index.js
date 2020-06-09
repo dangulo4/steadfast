@@ -41,6 +41,8 @@ class Navbar extends Component {
 
     return (
       <div>
+        <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
+        <Signup signup={this.state.signup} closeModal={this.state.closeSignup}></Signup>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">
             SteadFast
@@ -85,7 +87,6 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
@@ -95,7 +96,6 @@ class Navbar extends Component {
                 </button>
               </li>
               <li className='nav-item'>
-                <Signup signup={this.state.signup} closeModal={this.state.closeSignup}></Signup>
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
