@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Col, Row, Container } from '../components/Grid';
-import Jumbotron from '../components/Jumbotron';
+import { Col, Row} from '../components/Grid';
 import API from '../utils/API';
+import Page from './Page'
+
 
 function Detail(props) {
   const [contact, setContact] = useState({});
@@ -17,14 +18,13 @@ function Detail(props) {
   }, []);
 
   return (
-    <Container fluid>
+    <Page title = "Details">
       <Row>
-        <Col size="md-12">
-          <Jumbotron>
+        <Col size="md-12">     
             <h1>
               {contact.company} by {contact.email}, {contact.position}
             </h1>
-          </Jumbotron>
+          <hr></hr>
         </Col>
       </Row>
       <Row>
@@ -40,7 +40,7 @@ function Detail(props) {
           <Link to="/contacts">← Back to Contacts</Link>
         </Col>
       </Row>
-    </Container>
+    </Page>
   );
 }
 
