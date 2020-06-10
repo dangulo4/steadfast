@@ -45,7 +45,7 @@ class Navbar extends Component {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
       <img
-                    src="https://files.slack.com/files-pri/TQT6VKHUN-F014X2B9MQC/84f5789f-9f60-4305-8e7e-abb13be496da_200x200.png"
+                    src={require("../../images/steadfast-logo_viking_200x200.png")}
                     alt="logo"
                     className="img-logo"             
                   />
@@ -53,10 +53,6 @@ class Navbar extends Component {
       <div>
         <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
         <Signup signup={this.state.signup} closeModal={this.state.closeSignup}></Signup>
-        
-          <Link className="navbar-brand" to="/">
-            SteadFast
-          </Link>
           <div>
             <ul className="navbar-nav">
               <li className="nav-item">
