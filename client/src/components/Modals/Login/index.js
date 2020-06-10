@@ -25,7 +25,7 @@ class Login extends Component {
 
     // Modal JSX
     render() {
-        const { login } = this.state;
+        // const { login } = this.state;
         return (
             <Modal open = { this.props.login } onClose = { this.props.closeLogin }>
                 <div className = 'modal-body'>

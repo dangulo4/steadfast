@@ -15,30 +15,31 @@ class Navbar extends Component {
       // onLoginModalClose: false,
       // onSignupModalOpen: false,
       // onSignupModalClose: false,
-      login: false,
-      signup: false
+      
+      // login: false,
+      // signup: false
     }
   }
 
   // Modal state control
-  onLoginModalOpen = () => {
-    this.setState({ login: true });
-  };
+  // onLoginModalOpen = () => {
+  //   this.setState({ login: true });
+  // };
 
-  onLoginModalClose = () => {
-    this.setState({ login: false });
-  };
+  // onLoginModalClose = () => {
+  //   this.setState({ login: false });
+  // };
 
-  onSignupModalOpen = () => {
-    this.setState({ signup: true });
-  };
-  onSignupModalClose = () => {
-    this.setState({ signup: false });
-  };
+  // onSignupModalOpen = () => {
+  //   this.setState({ signup: true });
+  // };
+  // onSignupModalClose = () => {
+  //   this.setState({ signup: false });
+  // };
 
 
   render() {
-    const { login, signup } = this.state;
+    // const { login, signup } = this.state;
 
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -99,8 +100,9 @@ class Navbar extends Component {
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
-                  id = 'login'
-                  onClick = {this.onLoginModalOpen}>
+                  // id = 'login'
+                  // onClick = {this.onLoginModalOpen}
+                  >
                     Login
                 </button>
               </li>
@@ -108,8 +110,9 @@ class Navbar extends Component {
                 <button
                   // style = {{paddingLeft: "20px"}}
                   className = 'btn btn-secondary'
-                  id = 'signup'
-                  onClick = {this.onSignupModalOpen}>
+                  // id = 'signup'
+                  // onClick = {this.onSignupModalOpen}
+                  >
                     Signup
                 </button>
               </li>

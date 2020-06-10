@@ -25,7 +25,7 @@ class Signup extends Component {
 
     // Modal JSX
     render() {
-        const { signup } = this.state;
+        // const { signup } = this.state;
         return (
             <Modal open = { this.props.signup } onClose = { this.props.closeSignup }>
                 <div className = 'modal-body'>
