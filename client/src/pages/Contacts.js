@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import DeleteBtn from '../components/DeleteBtn';
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
-import { Col, Row, Container } from '../components/Grid';
+import { Col, Row} from '../components/Grid';
 import { List, ListItem } from '../components/List';
 import { Input, TextArea, FormBtn } from '../components/Form';
+import Page from './Page'
+
 
 function Contacts() {
   // Setting our component's initial state
@@ -60,7 +62,7 @@ function Contacts() {
   }
 
   return (
-    <Container fluid >
+    <Page title = "Contacts" >
       <Row>
         <Col size="md-6">
           <form>
@@ -132,7 +134,7 @@ function Contacts() {
           )}
         </Col>
       </Row>
-    </Container>
+    </Page>
   );
 }
 
