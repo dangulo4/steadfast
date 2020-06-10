@@ -49,6 +49,7 @@ class Navbar extends Component {
                     alt="logo"
                     className="img-logo"             
                   />
+                  
       </Link>
       <div>
         <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
