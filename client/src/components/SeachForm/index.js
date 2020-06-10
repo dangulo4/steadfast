@@ -20,7 +20,6 @@ function SearchForm(props) {
         <button onClick={props.refreshPage} className="btn btn-primary ml-1">
           Reset
         </button>
-        {/* <br /> */}
       </div>
     </form>
   );
