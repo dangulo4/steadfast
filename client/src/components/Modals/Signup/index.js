@@ -30,7 +30,7 @@ class Signup extends Component {
             <Modal open = { this.props.signup } onClose = { this.props.closeSignup }>
                 <div className = 'modal-body'>
                     <h2>Signup to Get Started!</h2>
-                    <form className = 'contact-form form-validate3' novalidate = 'novalidate'>
+                    <form className = 'contact-form form-validate3' noValidate = 'noValidate'>
                         <div className = 'form-group'>
                             <input className = 'form-control' type = 'text' name = 'name' id = 'name' placeholder = 'First Name'  required = ''  autoComplete = 'off'></input>
                         </div>

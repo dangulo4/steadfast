@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 // import Modal from 'react-responsive-modal';
 import Login from '../Modals/Login';
 import Signup from '../Modals/Signup';
+import './style.css';
 
 
 class Navbar extends Component {
@@ -35,17 +35,12 @@ class Navbar extends Component {
   onSignupModalClose = () => {
     this.setState({ signup: false });
   };
-  
+
 
   render() {
     const { login, signup } = this.state;
 
     return (
-=======
-import './style.css';
-
-function Navbar() {
-  return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
       <img
@@ -54,11 +49,10 @@ function Navbar() {
                     className="img-logo"             
                   />
       </Link>
->>>>>>> master
       <div>
         <Login login={this.state.login} closeModal={this.state.closeLogin}></Login>
         <Signup signup={this.state.signup} closeModal={this.state.closeSignup}></Signup>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        
           <Link className="navbar-brand" to="/">
             SteadFast
           </Link>
@@ -121,8 +115,8 @@ function Navbar() {
               </li>
             </ul>
           </div>
+          </div>
         </nav>
-      </div>
     );
   }
 }
