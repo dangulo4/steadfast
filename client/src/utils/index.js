@@ -4,6 +4,7 @@ import SearchForm from '../components/SeachForm';
 import Wrapper from '../components/Wrapper';
 import Col from '../components/Col';
 import API from './API';
+import Page from '../pages/Page'
 import './App.css';
 
 class Leads extends React.Component {
@@ -53,6 +54,7 @@ class Leads extends React.Component {
 
   render() {
     return (
+      <Page title="Search">
       <Wrapper>
         <div className="container fluid">
           <div className="row">
@@ -100,6 +102,7 @@ class Leads extends React.Component {
           </div>
         </div>
       </Wrapper>
+      </Page>
     );
   }
 }
