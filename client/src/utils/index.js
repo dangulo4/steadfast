@@ -5,6 +5,7 @@ import Wrapper from '../components/Wrapper';
 import Col from '../components/Col';
 import API from './API';
 import './App.css';
+import Page from '../pages/Page';
 
 class Leads extends React.Component {
   state = { contacts: [], search: '' };
@@ -54,51 +55,53 @@ class Leads extends React.Component {
   render() {
     return (
       <Wrapper>
-        <div className="container fluid">
-          <div className="row">
-            <Col size="md-6">
-              <h2>Contact Directory</h2>
-              <SearchForm
-                value={this.state.search}
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-              />
-            </Col>
-          </div>
+        <Page title="Search">
+          <div className="container fluid">
+            <div className="row">
+              <Col size="md-6">
+                <h2>Contact Directory</h2>
+                <SearchForm
+                  value={this.state.search}
+                  handleInputChange={this.handleInputChange}
+                  handleFormSubmit={this.handleFormSubmit}
+                />
+              </Col>
+            </div>
 
-          <div className="row">
-            <Col size="md-12">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Company</th>
-                    <th>Department</th>
-                    <th>Position</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>State</th>
-                  </tr>
-                </thead>
+            <div className="row">
+              <Col size="md-12">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Department</th>
+                      <th>Position</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>State</th>
+                    </tr>
+                  </thead>
 
-                {[...this.state.contacts].map((item) => (
-                  <ContactCard
-                    company={item.company}
-                    department={item.department}
-                    position={item.position}
-                    firstName={item.firstName}
-                    lastName={item.lastName}
-                    email={item.email}
-                    phone={item.phone}
-                    state={item.state}
-                    key={item.key}
-                  />
-                ))}
-              </table>
-            </Col>
+                  {[...this.state.contacts].map((item) => (
+                    <ContactCard
+                      company={item.company}
+                      department={item.department}
+                      position={item.position}
+                      firstName={item.firstName}
+                      lastName={item.lastName}
+                      email={item.email}
+                      phone={item.phone}
+                      state={item.state}
+                      key={item.key}
+                    />
+                  ))}
+                </table>
+              </Col>
+            </div>
           </div>
-        </div>
+        </Page>
       </Wrapper>
     );
   }

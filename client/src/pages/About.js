@@ -10,10 +10,11 @@ import {
   MDBView,
   MDBBtn,
 } from 'mdbreact';
+import Page from '../pages/Page';
 
 const About = () => {
   return (
-    <MDBContainer>
+    <Page title="About-Us">
       <MDBCard className="my-5 px-5 pb-5">
         <MDBCardBody>
           <MDBRow>
@@ -81,7 +82,7 @@ const About = () => {
           <hr className="mb-5 mt-4" />
         </MDBCardBody>
       </MDBCard>
-    </MDBContainer>
+    </Page>
   );
 };
 
