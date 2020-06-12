@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 // import Header from './Header';
 import LoggedOut from '../LoggedOut';
 import LoggedIn from '../LoggedIn';
+import style from './style.css';
 
 function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        SteadFast
+      <img
+                    src={require("../../images/steadfast-logo_viking_200x200.png")}
+                    alt="logo"
+                    className="img-logo"
+                    // style = {{height: "85px", width: "100px"}}           
+                  />
+                  
       </Link>
       <div>
         <ul className="navbar-nav">
