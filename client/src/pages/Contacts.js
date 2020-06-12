@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import DeleteBtn from '../components/DeleteBtn';
 import API from '../utils/API';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Col, Row} from '../components/Grid';
 import { List, ListItem } from '../components/List';
 import { Input, TextArea, FormBtn } from '../components/Form';
@@ -66,6 +66,10 @@ function Contacts() {
       <Row>
         <Col size="md-6">
           <form>
+            <h2 className="line text-center" style = {{color: "white"}}>
+              Your CMS Journey is moving steady.
+            </h2>
+            <hr style = {{backgroundColor: "white"}}></hr>
             <Input
               onChange={handleInputChange}
               name="firstName"
