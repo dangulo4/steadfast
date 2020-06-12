@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Col, Row } from '../components/Grid';
 import API from '../utils/API';
 import Page from './Page';
+import ReactMarkdown from 'react-markdown';
 
 function Detail(props) {
   const [contact, setContact] = useState({});
@@ -20,20 +21,29 @@ function Detail(props) {
     <Page title="Details">
       <Row>
         <Col size="md-12">
-          {/* <Jumbotron> */}
           <hr></hr>
           <h1>
-            {contact.company} by {contact.email}, {contact.position}
+            {contact.firstName} at {contact.company}, {contact.position}
           </h1>
           <hr></hr>
-          {/* </Jumbotron> */}
         </Col>
       </Row>
       <Row>
         <Col size="md-12 md-offset-1">
           <article>
-            <h1>Notes</h1>
-            <p>{contact.notes}</p>
+            <h1>Lead Notes</h1>
+            <ReactMarkdown
+              source={contact.notes}
+              allowedTypes={[
+                'paragraph',
+                'strong',
+                'emphasis',
+                'text',
+                'heading',
+                'list',
+                'listItem',
+              ]}
+            />
           </article>
         </Col>
       </Row>

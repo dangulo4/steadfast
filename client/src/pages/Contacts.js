@@ -51,8 +51,8 @@ function Contacts() {
         firstName: formObject.firstName,
         lastName: formObject.lastName,
         company: formObject.company,
-        email: formObject.email,
         position: formObject.position,
+        email: formObject.email,
         notes: formObject.notes,
       })
         .then((res) => loadContacts())
