@@ -22,9 +22,14 @@ function Guest() {
       <div className="row align-items-center">
         <div className="col-lg-7 py-3 py-md-5">
           <h1 className="display-3">
+
             Want to easily access B2B contact and write notes?
           </h1>
           <p className="lead text-muted">
+
+           
+          <p className="lead">
+
             The average salesperson spends 35.2% of their time selling, and 65%
             of their time on everything else*, which mostly involves dealing
             with administrative and research type tasks. These roadblocks keep a
@@ -33,13 +38,18 @@ function Guest() {
             teams by providing a cohesive platform that allows fast access to
             contacts in companies and easy CMS storage for notes. Sales teams
             can focus on selling, and we take care of the administrative
+
             roadblocks
+
           </p>
         </div>
         <div className="col-lg-5 pl-lg-5 pb-3 py-lg-5">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
+
               <label htmlFor="username-register" className="text-muted mb-1">
+
+
                 <small>Username</small>
               </label>
               <input
@@ -53,7 +63,10 @@ function Guest() {
               />
             </div>
             <div className="form-group">
+
               <label htmlFor="email-register" className="text-muted mb-1">
+
+
                 <small>Email</small>
               </label>
               <input
@@ -67,7 +80,9 @@ function Guest() {
               />
             </div>
             <div className="form-group">
+
               <label htmlFor="password-register" className="text-muted mb-1">
+
                 <small>Password</small>
               </label>
               <input

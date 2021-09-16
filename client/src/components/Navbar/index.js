@@ -8,7 +8,13 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        SteadFast
+      <img
+                    src={require("../../images/steadfast-logo_viking_200x200.png")}
+                    alt="logo"
+                    className="img-logo"
+                    // style = {{height: "85px", width: "100px"}}           
+                  />
+                  
       </Link>
       <div>
         <ul className="navbar-nav">

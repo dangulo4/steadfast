@@ -1,4 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
+
+
 import Axios from 'axios';
 
 function LoggedOut(props) {
@@ -8,11 +11,14 @@ function LoggedOut(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
+
       const response = await Axios.post('/login', {
         username,
         password,
       });
       console.log(response.data);
+
+     
       if (response.data) {
         localStorage.setItem('steadfastToken', response.data.token);
         localStorage.setItem('steadfastUsername', response.data.username);

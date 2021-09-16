@@ -6,7 +6,6 @@ import NoMatch from './pages/NoMatch';
 import NavBar from './components/Navbar';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
-import Jumbotron from './components/Jumbotron';
 import Footer from './components/Footer';
 import Col from './components/Col';
 import Leads from './utils';
@@ -46,13 +45,8 @@ function App() {
               <h1>This is the Header for Steadfast</h1>
             </Header>
           </Col>
-          <Jumbotron>
-            <Col size="md-12">
-              <div className="container fluid"></div>
-            </Col>
-          </Jumbotron>
         </div>
-        <hr></hr>
+        <hr style = {{backgroundColor: "white"}}></hr>
 
         <Col size="md-12">
           <Footer>

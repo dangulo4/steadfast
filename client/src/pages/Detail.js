@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Col, Row } from '../components/Grid';
-import API from '../utils/API';
-import Page from './Page';
+
 import ReactMarkdown from 'react-markdown';
+
+import { Col, Row} from '../components/Grid';
+import API from '../utils/API';
+import Page from './Page'
+
+
 
 function Detail(props) {
   const [contact, setContact] = useState({});
@@ -18,13 +22,14 @@ function Detail(props) {
   }, []);
 
   return (
-    <Page title="Details">
+
+    <Page title = "Details">
       <Row>
-        <Col size="md-12">
-          <hr></hr>
-          <h1>
-            {contact.firstName} at {contact.company}, {contact.position}
-          </h1>
+        <Col size="md-12">     
+            <h1>
+              {contact.company} by {contact.email}, {contact.position}
+            </h1>
+
           <hr></hr>
         </Col>
       </Row>

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import DeleteBtn from '../components/DeleteBtn';
 import API from '../utils/API';
-import { Link } from 'react-router-dom';
-import { Col, Row } from '../components/Grid';
+
+import { Link, withRouter } from 'react-router-dom';
+import { Col, Row} from '../components/Grid';
 import { List, ListItem } from '../components/List';
 import { Input, TextArea, FormBtn } from '../components/Form';
-import Page from './Page';
+import Page from './Page'
+
+
 
 function Contacts() {
   // Setting our component's initial state
@@ -61,7 +64,9 @@ function Contacts() {
   }
 
   return (
-    <Page title="Contacts">
+
+    <Page title = "Contacts" >
+
       <Row>
         <Col size="md-6">
           <h2 className="text-center">
@@ -70,6 +75,10 @@ function Contacts() {
           </h2>
           <hr></hr>
           <form>
+            <h2 className="line text-center" style = {{color: "white"}}>
+              Your CMS Journey is moving steady.
+            </h2>
+            <hr style = {{backgroundColor: "white"}}></hr>
             <Input
               onChange={handleInputChange}
               name="firstName"
