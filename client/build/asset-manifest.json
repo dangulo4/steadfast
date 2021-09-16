@@ -1,4 +1,5 @@
 {
+
   "main.css": "/static/css/main.a2650554.chunk.css",
   "main.js": "/static/js/main.7cce118d.chunk.js",
   "main.js.map": "/static/js/main.7cce118d.chunk.js.map",
@@ -11,4 +12,5 @@
   "service-worker.js": "/service-worker.js",
   "static/css/main.a2650554.chunk.css.map": "/static/css/main.a2650554.chunk.css.map",
   "static/media/steadfast-logo_viking_200x200.png": "/static/media/steadfast-logo_viking_200x200.e03d3780.png"
+
 }

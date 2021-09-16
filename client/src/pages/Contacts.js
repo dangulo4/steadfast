@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import DeleteBtn from '../components/DeleteBtn';
 import API from '../utils/API';
+
 import { Link, withRouter } from 'react-router-dom';
 import { Col, Row} from '../components/Grid';
 import { List, ListItem } from '../components/List';
 import { Input, TextArea, FormBtn } from '../components/Form';
 import Page from './Page'
+
 
 
 function Contacts() {
@@ -52,8 +54,8 @@ function Contacts() {
         firstName: formObject.firstName,
         lastName: formObject.lastName,
         company: formObject.company,
-        email: formObject.email,
         position: formObject.position,
+        email: formObject.email,
         notes: formObject.notes,
       })
         .then((res) => loadContacts())
@@ -62,9 +64,16 @@ function Contacts() {
   }
 
   return (
+
     <Page title = "Contacts" >
+
       <Row>
         <Col size="md-6">
+          <h2 className="text-center">
+            Hello <strong>{localStorage.getItem('steadfastUsername')}</strong>,
+            your CMS Journey is moving steady.
+          </h2>
+          <hr></hr>
           <form>
             <h2 className="line text-center" style = {{color: "white"}}>
               Your CMS Journey is moving steady.

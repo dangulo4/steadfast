@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 // import Header from './Header';
 import LoggedOut from '../LoggedOut';
 import LoggedIn from '../LoggedIn';
-import style from './style.css';
 
 function Navbar(props) {
   return (

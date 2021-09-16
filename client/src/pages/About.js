@@ -10,11 +10,15 @@ import {
   MDBView,
   MDBBtn,
 } from 'mdbreact';
+
+
+
 import Page from './Page'
 
 const About = () => {
   return (
     <Page title = "About-Us">
+
       <MDBCard className="my-5 px-5 pb-5">
         <MDBCardBody>
           <MDBRow>

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+
+import ReactMarkdown from 'react-markdown';
+
 import { Col, Row} from '../components/Grid';
 import API from '../utils/API';
 import Page from './Page'
+
 
 
 function Detail(props) {
@@ -18,20 +22,33 @@ function Detail(props) {
   }, []);
 
   return (
+
     <Page title = "Details">
       <Row>
         <Col size="md-12">     
             <h1>
               {contact.company} by {contact.email}, {contact.position}
             </h1>
+
           <hr></hr>
         </Col>
       </Row>
       <Row>
         <Col size="md-12 md-offset-1">
           <article>
-            <h1>Notes</h1>
-            <p>{contact.notes}</p>
+            <h1>Lead Notes</h1>
+            <ReactMarkdown
+              source={contact.notes}
+              allowedTypes={[
+                'paragraph',
+                'strong',
+                'emphasis',
+                'text',
+                'heading',
+                'list',
+                'listItem',
+              ]}
+            />
           </article>
         </Col>
       </Row>
